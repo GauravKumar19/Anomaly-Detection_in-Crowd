@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $("document").ready(function(){
+
+      $("#userName").blur(function(){
+        if($("#userName").val() != "pip"){
+
+          $("#nameErrorMsg").text("Please enter valid user name").css("color", "red");
+        }
+        else{
+          $("#nameErrorMsg").text("").css("color", "red");
+        }
+      });
+      $("#pass").blur(function(){
+        if($("#pass").val() != "pip"){
+
+          $("#passErrorMsg").text("Please enter valid user name").css("color", "red");
+        }
+        else{
+          $("#passErrorMsg").text("").css("color", "red");
+        }
+      });
+
+      //
+      $("#submit").click(function(){
+        if(($("#userName").val() != "pip")&&$("#userName").val() == ""){
+
+          $("#nameErrorMsg").text("Please enter valid user name").css("color", "red");
+        }
+
+        if(($("#pass").val() != "pip")&&$("#pass").val() == ""){
+
+         $("#passErrorMsg").text("Please enter valid password").css("color", "red");
+       }
+        if (($("#userName").val() == "pip")&&($("#pass").val()=="pip") ){
+        //  window.location.assign("prediction.html");
+          window.location.href="prediction.html";
+        }
+
+      });
+    })
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <style>
+  .blueBg{
+      background-color: #13204a;
+    }
+  li .nav-link:hover{
+     background-color: white;
+     color: black!important;
+  }
+  .p-50{
+      padding-left: 80px;
+      padding-right: 80px;
+  }
+  .mb-50{
+      margin-bottom: 80px;
+  }
+.icons{
+    font-size: 1.5em;
+}
+.icons:hover,.box:hover{
+    /* color: rgb(162, 167, 170); */
+    background-color:#d5d7df ;
+<!--    color: white;-->
+}
+.relative{
+    position: relative;
+     /* top: 20px;  */
+     box-shadow: 0 4px 8px 0 rgba(3, 3, 3, 0.9), 0 6px 20px 0 rgba(10, 9, 9, 0.19);
+      /* width:10px;   */
+     height: 685px;
+}
+
+.b-0{
+    position:absolute;
+    bottom: 20px;}
+
+ul{ 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;}
+    .box{
+        width: 38px;
+        height: 38px;
+        color:#13204a ;
+        background-color: white;
+        display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    .modal ::-webkit-input-placeholder {
+
+            color: grey;
+            font-size: 12px;
+         }
+         .form-control:focus{
+           box-shadow: none;
+           border-color: #ced4da;
+         }
+         .btn:focus {
+    box-shadow: none;
+}
+    
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row justify-content-around">
+    <div class="col-5">
+        <img src="image-recognition-tools.png" class="img-fluid mx-auto" alt="mainPageImage"style="height: 500px;width: 600px;margin-top: 90px;"/>
+    </div>
+    <div class="col-6 blueBg text-white p-50  relative">
+        <nav class="navbar navbar-expand-sm mb-50  px-0 pt-2">
+
+            <!-- Links -->
+            <ul class="navbar-nav col-12  d-flex ">
+              <li class="nav-item pr-5">
+                <a class="nav-link text-white font-weight-bolder" href="Main_page.html">HOME</a>
+              </li>
+              
+              <li class="nav-item px-5">
+                <a class="nav-link text-white font-weight-bolder" href="prediction.html"  data-toggle="modal" data-target="#prediction">PREDICTION</a>
+              </li>
+              <li class="nav-item px-5">
+                <a class="nav-link text-white font-weight-bolder" href="About_us.html">ABOUT US</a>
+              </li>
+            </ul>
+          
+        </nav>
+          <h1 class="text-white  mb-4">2017 PJ IT-20</h1>
+          <p class="text-white " style="font-size:70px;">Deviant Activity Recognition</p>
+        <div class="b-0">
+          <p class="text-white mb-1">Sarthak & Gaurav</p>
+          <p class="text-white ">123-456-789</p>
+          <div class="social   "> 
+            <ul class="d-flex ">
+                <li class="mr-1  box "><i class="fab fa-facebook-f icons " ></i></li>
+                <li class="mr-1  box"><i class="fab fa-google icons "></i></li>
+                <li class="mr-1  box"><i class="fab fa-twitter icons"></i></li>
+            </ul>
+                
+         </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="prediction"  data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered">
+     <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+           <h6 class="modal-title text-center mx-auto">Authetication..</h6>
+           <!-- <button type="button" class="close lineHeight" data-dismiss="modal">&times;</button> -->
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+
+           <div class="form-group row mb-2">
+              <label for="userName" class="col-5 text-right" >Name</label>
+              <input type="text" class="form-control col-5 mr-auto" id="userName" autocomplete="off" placeholder="User Name">
+              <p id="nameErrorMsg" class="col-7 pl-0 small pr-5 ml-auto"></p>
+           </div>
+           <div class="form-group row mb-0">
+            <label for="pass" class="col-5 text-right" >Password</label>
+            <input type="password" class="form-control col-5 mr-auto" id="pass" autocomplete="off" placeholder="Please enter your password">
+            <p id="passErrorMsg" class="col-7 pl-0 small pr-5 ml-auto"></p>
+         </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer p-1">
+           <button type="button"  class="btn blueBg text-light mx-auto btn-small"  id="submit">Submit</button>
+        </div>
+     </div>
+  </div>
+</div>
+
+</body>
+</html>
