@@ -1,7 +1,3 @@
-# USAGE
-# python predict_video.py --model model/activity.model --label-bin model/lb.pickle --input example_clips/lifting.mp4 --output output/lifting_128avg.avi --size 128
-# python predict_video.py --model model/road_activity.model --label-bin model/rd.pickle --input example_clips/fire_footage.mp4 --ou
-# tput output/fire_footage2.avi --size 128
 
 # import the necessary packages
 from tensorflow.keras.models import load_model
